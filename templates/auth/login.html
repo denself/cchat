@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}CChat | Login{% endblock %}
+{% block css %}{% endblock %}
+<!--{% block js %}<script src="{% static 'js/script_auth.js' %}"></script>{% endblock %}-->
+{% block body %}
+    {% include 'errors.html' with errors=errors %}
+    <div class="login_container">
+        <form action="" method="post" id="auth_login_form" name="auth_login_form">
+            {% csrf_token %}
+            <input type="email" name="auth_email"><br>
+            <input type="password" name="auth_password"><br>
+            <input type="submit" value="Submit"><br>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% if errors %}
+asdf
+    <div>
+        {% for error in errors %}
+        <div>
+            <strong>{{error.field}}:</strong> {{error.message}}
+        </div>
+        {% endfor %}
+    </div>
+{% endif %}
